@@ -31,7 +31,6 @@ const config = {
     ],
     externals: {
         moment: 'moment',
-        fs : 'fs',
         portfinder: 'portfinder'
     },
     resolve: {

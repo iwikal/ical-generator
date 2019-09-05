@@ -284,31 +284,7 @@ class ICalCalendar {
 
 
     /**
-     * Save ical file with `fs.save`. Only works in node.js environments.
-     *
-     * @param {String} path Filepath
-     * @param [cb] Callback
-     * @returns {ICalCalendar}
-     */
-    save(path, cb) {
-        require('fs').writeFile(path, this._generate(), cb);
-        return this;
-    }
-
-
-    /**
-     * Save ical file with `fs.saveSync`. Only works in node.js environments.
-     *
-     * @param {String} path Filepath
-     * @returns {Number} Number of Bytes written
-     */
-    saveSync(path) {
-        return require('fs').writeFileSync(path, this._generate());
-    }
-
-
-    /**
-     * Save ical file with `fs.saveSync`
+     * Serve ical file
      *
      * @param {http.ServerResponse} response Response
      * @param {String} [filename = 'calendar.ics'] Filename
